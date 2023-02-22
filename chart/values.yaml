@@ -1,0 +1,41 @@
+# your override should supply an envName
+envName: null
+
+# if set, override all Applications to use this project
+projectOverride: null
+
+default:
+  app:
+    enableAutoSync: true
+    autoSyncPrune: true
+    destination:
+      namespace: null
+      server: null
+    project: null
+    source:
+      path: null
+      repoURL: null
+      targetRevision: HEAD
+
+applications:
+  nginx1:
+    enabled: true
+    destination:
+      namespace: nginx1
+      server: null
+    project: default
+    source:
+      path: ./charts/ingress-nginx
+      repoURL: https://github.com/kubernetes/ingress-nginx.git
+      targetRevision: HEAD
+
+  nginx2:
+    enabled: true
+    destination:
+      namespace: nginx2
+      server: null
+    project: default
+    source:
+      path: ./charts/ingress-nginx
+      repoURL: https://github.com/kubernetes/ingress-nginx.git
+      targetRevision: HEAD
