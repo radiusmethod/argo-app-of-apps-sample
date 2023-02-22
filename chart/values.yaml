@@ -4,6 +4,10 @@ envName: appofapps
 projectOverride: null
 
 default:
+  project:
+    destinations: |
+      - namespace: {{ $.Values.default.app.destination.namespace | required "Missing proj dest namespace"}}
+        server: {{ $.Values.default.app.destination.server | required "Missing proj dest server" }}
   app:
     enableAutoSync: true
     autoSyncPrune: true
