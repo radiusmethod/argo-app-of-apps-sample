@@ -1,6 +1,6 @@
 envName: appofapps
 
-projectOverride: null
+projectOverride: default
 
 default:
   project:
