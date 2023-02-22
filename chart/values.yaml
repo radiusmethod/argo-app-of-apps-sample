@@ -1,35 +1,25 @@
 envName: appofapps
 
-#projectOverride: default
+projectOverride: default
 
 default:
-  project:
-    destinations: |
-      - namespace: {{ $.Values.default.app.destination.namespace | required "Missing proj dest namespace"}}
-        server: {{ $.Values.default.app.destination.server | required "Missing proj dest server" }}
   app:
     enableAutoSync: true
     autoSyncPrune: true
     destination:
-      namespace: null
       server: https://kubernetes.default.svc
+      namespace: argocd
     project: null
     source:
       path: null
       repoURL: null
-      targetRevision: HEAD
-
-projects:
-  servers:
-    description: 'nginx servers'
-    sourceRepos:
-      -  https://github.com/kubernetes/ingress-nginx/*
+      targetRevision: null
 
 applications:
   nginx1:
     enabled: true
     destination:
-      namespace: default
+      namespace: null
       server: null
     project: servers
     source:
@@ -40,7 +30,7 @@ applications:
   nginx2:
     enabled: true
     destination:
-      namespace: default
+      namespace: null
       server: null
     project: servers
     source:
