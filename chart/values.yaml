@@ -19,13 +19,19 @@ default:
       repoURL: null
       targetRevision: HEAD
 
+projects:
+  servers:
+    description: 'nginx servers'
+    sourceRepos:
+      -  https://github.com/kubernetes/ingress-nginx/*
+
 applications:
   nginx1:
     enabled: true
     destination:
       namespace: default
       server: null
-    project: default
+    project: servers
     source:
       path: ./charts/ingress-nginx
       repoURL: https://github.com/kubernetes/ingress-nginx.git
@@ -36,7 +42,7 @@ applications:
     destination:
       namespace: default
       server: null
-    project: default
+    project: servers
     source:
       path: ./charts/ingress-nginx
       repoURL: https://github.com/kubernetes/ingress-nginx.git
