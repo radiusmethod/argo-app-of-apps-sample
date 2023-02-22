@@ -20,7 +20,7 @@ applications:
   nginx1:
     enabled: true
     destination:
-      namespace: nginx1
+      namespace: default
       server: null
     project: default
     source:
@@ -31,7 +31,7 @@ applications:
   nginx2:
     enabled: true
     destination:
-      namespace: nginx2
+      namespace: default
       server: null
     project: default
     source:
