@@ -1,5 +1,4 @@
-# your override should supply an envName
-envName: null
+envName: appofapps
 
 # if set, override all Applications to use this project
 projectOverride: null
@@ -10,7 +9,7 @@ default:
     autoSyncPrune: true
     destination:
       namespace: null
-      server: null
+      server: https://kubernetes.default.svc
     project: null
     source:
       path: null
