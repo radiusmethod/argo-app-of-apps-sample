@@ -3,5 +3,5 @@
 ### Installation
 
 ```shell
-kubectl apply -f 
+kubectl apply -f https://raw.githubusercontent.com/radiusmethod/argo-app-of-apps-sample/main/install.yaml
 ```
