@@ -21,7 +21,7 @@ applications:
     destination:
       namespace: null
       server: null
-    project: servers
+    project: null
     source:
       path: ./charts/ingress-nginx
       repoURL: https://github.com/kubernetes/ingress-nginx.git
@@ -32,7 +32,7 @@ applications:
     destination:
       namespace: null
       server: null
-    project: servers
+    project: null
     source:
       path: ./charts/ingress-nginx
       repoURL: https://github.com/kubernetes/ingress-nginx.git
